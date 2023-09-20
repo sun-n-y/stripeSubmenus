@@ -185,7 +185,8 @@ p {
     .nav-links {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width: 70%;
+        max-width: 600px;
+
         justify-self: center;
     }
 
