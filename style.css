@@ -10,6 +10,8 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
 
 /* nav */
@@ -138,7 +140,7 @@ body {
 
 p {
     width: 60%;
-    color: #617d98;
+    color: rgb(240, 239, 239);
 }
 
 .btn2 {
@@ -157,6 +159,51 @@ p {
 .btn2:hover {
     background-color: rgba(0, 0, 0, 0.459);
 }
+
+/* sidebar */
+
+.sidebar {
+    display: none;
+}
+
+.sidebar::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+.sidebar-content {
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    height: 90vh;
+    width: 90vw;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.sidebar-info {
+    margin-top: 2rem;
+}
+
+.close-btn {
+    font-size: 2rem;
+    position: absolute;
+    top: 2%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.show-sidebar {
+    display: block;
+}
+
 
 @media screen and (min-width:800px) {
     /* nav */
@@ -208,6 +255,8 @@ p {
     }
 
     p {
+        width: 60%;
+        color: #617d98;
         max-width: 450px;
     }
 
@@ -223,6 +272,11 @@ p {
 
     .hero-info {
         align-self: center;
+    }
+
+    /* sidebar */
+    .sidebar {
+        display: none;
     }
 }
 
