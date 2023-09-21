@@ -46,6 +46,19 @@ links.forEach((link) => {
     const linkXY = link.getBoundingClientRect();
     const top = linkXY.height + 7;
     const left = linkXY.left + linkXY.width / 2;
+    const label = e.target.textContent;
+
+    const filteredInfo = sublinks.filter((item) => item.page === label);
+    const { page, links } = filteredInfo[0];
+
+    navSubMenu.innerHTML = `
+    <h4 class="submenu-title">${page}</h4>
+    <div class="submenu-links">${links
+      .map((link) => {
+        return `<a href="${link.url}"><i class="${link.icon} sidebar-icons"></i>${link.label}</a>`;
+      })
+      .join('')}</div>
+    `;
 
     if (e.target.classList.contains('nav-link')) {
       navSubMenu.classList.add('show-submenu');

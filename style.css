@@ -249,7 +249,6 @@ p {
     .nav-links {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        max-width: 600px;
         justify-self: center;
         position: relative;
     }
@@ -258,12 +257,23 @@ p {
         position: absolute;
         top: 0;
         left: 0;
-        padding: 1rem;
+        padding: 1.5rem;
         background-color: white;
         display: none;
         margin: .2rem;
         border-radius: .5rem;
         transform: translateX(-50%);
+    }
+
+    .submenu-title {
+        text-transform: capitalize;
+        margin-bottom: 1rem;
+    }
+
+    .submenu-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
     }
 
     .show-submenu {
