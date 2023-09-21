@@ -14,6 +14,12 @@ body {
     position: relative;
 }
 
+a {
+    text-decoration: none;
+    color: #617d98;
+    text-transform: capitalize;
+}
+
 /* nav */
 
 .nav {
@@ -184,6 +190,9 @@ p {
 
 .sidebar-info {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
 }
 
 .close-btn {
@@ -197,6 +206,23 @@ p {
 .show-sidebar {
     display: block;
 }
+
+.sidebar-icons {
+    margin: 0 1rem 0 0;
+}
+
+.sidebar-info h4 {
+    text-transform: capitalize;
+}
+
+.sidebar-links {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5rem;
+}
+
+/* submenu */
 
 /* .nav-submenu {
     display: none;
