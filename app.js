@@ -28,8 +28,9 @@ window.addEventListener('resize', () => {
 links.forEach((link) => {
   link.addEventListener('mouseover', (e) => {
     const linkXY = link.getBoundingClientRect();
-    const top = linkXY.height + 3;
-    const left = linkXY.left + 50;
+    const top = linkXY.height + 5;
+    const left = linkXY.left - 300;
+    console.log(linkXY);
     if (e.target.classList.contains('nav-link')) {
       navSubMenu.classList.add('show-submenu');
       navSubMenu.style.top = `${top}px`;
