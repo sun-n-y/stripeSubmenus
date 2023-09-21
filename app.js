@@ -44,8 +44,6 @@ nav.addEventListener('mouseover', function (e) {
   }
 });
 
-// hero.addEventListener('mouseover', function (e) {
-//   if (!e.target.classList.contains('nav-link')) {
-//     navSubMenu.classList.remove('show-submenu');
-//   }
-// });
+hero.addEventListener('mouseover', function () {
+  navSubMenu.classList.remove('show-submenu');
+});
