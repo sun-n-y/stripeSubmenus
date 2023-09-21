@@ -27,14 +27,13 @@ window.addEventListener('resize', () => {
 // mouse over submenus
 links.forEach((link) => {
   link.addEventListener('mouseover', (e) => {
-    if (e.currentTarget.classList.contains('nav-link')) {
+    const linkXY = link.getBoundingClientRect();
+    const top = linkXY.height + 3;
+    const left = linkXY.left + 50;
+    if (e.target.classList.contains('nav-link')) {
       navSubMenu.classList.add('show-submenu');
+      navSubMenu.style.top = `${top}px`;
+      navSubMenu.style.left = `${left}px`;
     }
   });
-});
-
-nav.addEventListener('mouseover', (e) => {
-  if (!e.target.classList.contains('nav-link')) {
-    navSubMenu.classList.remove('show-submenu');
-  }
 });
