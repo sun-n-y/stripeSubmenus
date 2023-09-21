@@ -51,11 +51,21 @@ links.forEach((link) => {
     const filteredInfo = sublinks.filter((item) => item.page === label);
     const { page, links } = filteredInfo[0];
 
+    let column = 'col-2';
+
+    if (links.length === 3) {
+      column = 'col-3';
+    }
+
+    if (links.length > 3) {
+      column = 'col-4';
+    }
+
     navSubMenu.innerHTML = `
     <h4 class="submenu-title">${page}</h4>
-    <div class="submenu-links">${links
+    <div class="submenu-links ${column}">${links
       .map((link) => {
-        return `<a href="${link.url}"><i class="${link.icon} sidebar-icons"></i>${link.label}</a>`;
+        return `<a href="${link.url}" class="submenu-link"><i class="${link.icon} submenu-icons"></i>${link.label}</a>`;
       })
       .join('')}</div>
     `;
