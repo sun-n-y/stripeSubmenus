@@ -265,6 +265,18 @@ p {
         transform: translateX(-50%);
     }
 
+    .nav-submenu::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 48%;
+        transform: translateX(50%);
+        transform: rotate(45deg);
+        width: 25px;
+        height: 25px;
+        background-color: white;
+    }
+
     .submenu-title {
         text-transform: capitalize;
         margin-bottom: 1rem;
