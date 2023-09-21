@@ -222,12 +222,6 @@ p {
     gap: .5rem;
 }
 
-/* submenu */
-
-/* .nav-submenu {
-    display: none;
-} */
-
 @media screen and (min-width:800px) {
     /* nav */
 
@@ -269,6 +263,7 @@ p {
         display: none;
         margin: .2rem;
         border-radius: .5rem;
+        transform: translateX(-50%);
     }
 
     .show-submenu {
