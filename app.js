@@ -6,7 +6,6 @@ const closeBtn = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const sidebarInfo = document.querySelector('.sidebar-info');
 const links = document.querySelectorAll('.nav-link');
-const linksContainer = document.querySelector('.nav-links');
 const hero = document.querySelector('.hero');
 const navSubMenu = document.querySelector('.nav-submenu');
 const nav = document.querySelector('.nav');
@@ -44,11 +43,9 @@ window.addEventListener('resize', () => {
 // mouse over submenus
 links.forEach((link) => {
   link.addEventListener('mouseover', (e) => {
-    const linkContXY = linksContainer.getBoundingClientRect();
     const linkXY = link.getBoundingClientRect();
-
-    const top = linkContXY.height;
-    const left = linkXY.x + linkXY.width / 2;
+    const top = linkXY.height + 7;
+    const left = linkXY.left + linkXY.width / 2;
 
     if (e.target.classList.contains('nav-link')) {
       navSubMenu.classList.add('show-submenu');
