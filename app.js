@@ -5,7 +5,7 @@ const toggleBtn = document.querySelector('.toggle-btn');
 const closeBtn = document.querySelector('.close-btn');
 const sidebar = document.querySelector('.sidebar');
 const links = document.querySelectorAll('.nav-link');
-const linksContainer = document.querySelector('.nav-links');
+const hero = document.querySelector('.hero');
 const navSubMenu = document.querySelector('.nav-submenu');
 const nav = document.querySelector('.nav');
 
@@ -37,3 +37,15 @@ links.forEach((link) => {
     }
   });
 });
+
+nav.addEventListener('mouseover', function (e) {
+  if (!e.target.classList.contains('nav-link')) {
+    navSubMenu.classList.remove('show-submenu');
+  }
+});
+
+// hero.addEventListener('mouseover', function (e) {
+//   if (!e.target.classList.contains('nav-link')) {
+//     navSubMenu.classList.remove('show-submenu');
+//   }
+// });
